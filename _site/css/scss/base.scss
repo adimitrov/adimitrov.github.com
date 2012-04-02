@@ -1,0 +1,155 @@
+$black:      #000000;
+$mid-grey:   #777777;
+$light-grey: #eeeeee;
+$blue:       #227CE8;
+
+$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+$sans: Helvetica, sans-serif;
+$headline: 'Yanone Kaffeesatz', $sans;
+
+* {
+}
+
+body {
+  font-family: $serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $blue;
+}
+
+.content {
+  margin-left: 110px;
+  width: 650px;
+  margin-bottom: 50px;
+
+  // h1-h4
+  @each $number in 1,2,3,4 {
+    h#{$number} {
+      color: #333;
+      font-family: $headline;
+      font-weight: 400;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h#{$number} a {
+      color: #111;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 18px 0 5px 0;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    color: #777;
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    line-height: 1.7em;
+
+    code {
+      font-size: 12px;
+      background-color: $light-grey;
+      border: 1px solid $mid-grey;
+      border-radius: 3px;
+      padding: 2px 3px;
+    }
+  }
+
+  img {
+    padding: 3px;
+    border: 1px solid $light-grey;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2em 1em;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 14px;
+    padding: .25em 1em;
+    margin: 1em 1em 0 1em;
+    color: #444;
+
+    cite:before {
+      content: '';
+    }
+
+    cite {
+      display: block;
+      margin-top: .5em;
+      text-align: right;
+      color: #111;
+      font-style: normal;
+    }
+  }
+
+  .byline {
+    margin-bottom: 17px;
+    font-family: $headline;
+    padding-left: 0px;
+    font-size: 17px;
+    color: #777;
+  }
+
+  .aside {
+    background-color: $light-grey;
+    padding: 14px;
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6em;
+  }
+
+  .listing {
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-family: $sans;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      font-size: 13px;
+      list-style: none;
+      padding: 5px 3px;
+      margin: 0;
+      color: $mid-grey;
+      border-bottom: 1px solid #eee;
+    }
+
+    li span {
+      float: right;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
